@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--Francisco Rossi:219401 y Guillermo Ramirez:207523 -->
+<html lang="es">
+<head>
+	
+	<meta charset="utf-8">
+	<title>TeleCentro</title>
+	<link rel="stylesheet" href = "css/estilos.css">
+</head>
+
+
+<body>
+
+	<img id="idTeleCentroimagen" src="img/TeleCentro.jpg" alt="Imagen del banner TeleCentro">
+
+	<nav> <!-- Para usar la referncias de secciones-->
+		<ul>
+			<li><a href="#Operadores">Operadores</a></li>
+			<li><a href="#Llamadas">Llamadas</a></li>
+			<li><a href="#Consultas">Consultas</a></li>
+		</ul>
+	</nav>
+
+			
+	<a id="tope"></a> <!--para usar el ir al tope que esta a lo ultimo-->
+
+
+	<div id="BloqueCompleto">
+	<div id="BloqueOperadores"> <!-- Separa en bloques las secciones para ocultarlos a gusto-->
+	<h1>
+		<u>Manejo de Operadores</u>
+		<a id="Operadores"></a>
+	</h1>
+	<br>
+
+	<h2>Registro de operadores</h2>
+		<form id="formRegistroOperadores">	
+			<label for="idNombreRegistro">Nombre:</label>
+			<input type="text" id="idNombreRegistro" placeholder="Nombre" maxlength="20" required>
+			<label for="idEdadRegistro">Edad:</label>
+			<input type="number" id="idEdadRegistro" placeholder="Edad" min="18" max="65" required>
+			<label for="idMailRegistro">Mail:</label>
+			<input type="email" id="idMailRegistro" placeholder="Mail" required>
+			<button id="BotonRegistro" type="submit">Agregar</button>
+		</form>
+	<h2>Visualización de Operadores</h2>
+
+		<label>Orden:</label>
+		<input type="radio" id="idNombreRadio" name="Visualizacion" value="Nombre" checked>
+		<label for="idNombreRadio">nombre</label>
+		<input type="radio" id="idEdadRadio" name="Visualizacion" value="edad">
+		<label for="idEdadRadio">edad</label>	
+		<ul>
+			<li>Ana Gonzáles 30 gonzales@gmail.com</li>
+			<li>Luis Pérez 55 perez@gmail.com</li>
+		</ul>
+	</div>
+
+
+	<div id="BloqueLlamadas"> <!--Cambio de bloque al de llamadas-->
+
+	<h1>
+		<u>Manejo de Llamadas</u>
+		<a id="Llamadas"></a>
+	</h1>
+	<br>
+
+	<h2>Registro de llamadas</h2>
+
+
+		<label for="idOperadorRegistro">Operador:</label>
+		<select name="SelectOperadorRegistro" id="idOperadorRegistro"> <!-- boton con diferentes opciones-->
+			<option value="Ana Gonzáles">Ana Gonzáles</option>
+			<option value="Luis Pérez">Luis Pérez</option>
+		</select>
+		<label for="idDescripciónRegistro">Descripción:</label>
+		<input type="text" id="idDescripciónRegistro" placeholder="Descripción">
+		<label for= "idMotivoRegistro">Motivo:</label>
+		<input type="number" id="idMotivoRegistro" placeholder="1">
+		<label for="idDuracionRegistro">Duración</label>
+		<input type="number" id="idDuracionRegistro" placeholder="1">
+		<label for="idCelularRegistro">Celular</label>
+		<input type="text" id="idCelularRegistro" placeholder="celular">
+		<button id="buttonRegistro">Agregar</button>
+
+	<h2>Muestra de Llamadas</h2>
+		<label>Orden:</label>
+		<input type="radio" id="idNumeroMuestra" name="Muestra" value="número" checked>
+		<label for="idNumeroMuestra">número</label>
+		<input type="radio" id="idNombreMuestra" name="Muestra" value="nombre/número">
+		<label for="idNombreMuestra">nombre/número</label>
+
+
+		<!-- Tabla de manejo de llamadas-->
+		<table>
+			<tr>
+				<th>NUMERO</th>
+				<th>OPERADOR</th>
+				<th>DESCRIPCION</th>
+				<th>MOTIVO</th>
+				<th>DURACION</th>
+				<th>CELULAR</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Ana Gonzáles</td>
+				<td>No funciona bien</td>
+				<td><img  src="img/Numero3.jpg" alt="imagen numero 3"></td>
+				<td>15</td>
+				<td>0991123123</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Luis Pérez</td>
+				<td>Hace ruido</td>
+				<td><img  src="img/Numero3.jpg" alt="imagen numero 3"></td>
+				<td>15</td>
+				<td>095654123</td>
+			</tr>
+		</table>
+<br>	
+<hr> <!--ACA TERMINA LA PRIMER PARTE -->
+</div>
+<!-- Comienza la parte de consultas-->
+
+
+
+<div id="BloqueConsultas">
+<h2>
+		<u>Consultas</u>
+		<a id="Consultas"></a>
+	</h2>
+	<br>
+
+	<h3>
+		<b>Consulta por operador</b>
+	</h3>
+	
+
+	<label for ="idOperadorConsulta">Operador</label>
+	<select name="nombres" id="idOperadorConsulta">
+	<option>Ana Gonzalez</option>
+	<option>Luis Perez</option>
+	</select>
+	<button type="button">Consultar historia</button>
+	<br />
+	<br>
+
+	<p>Motivos no atendio: <img id="idNumeros12456imagen" src="img/Numeros12456.jpg" alt="imagen numeros 123456"></p>
+	<p>Llamada mas larga: Numero 1 Duracion 15</p>
+	<p>Tiempo promedio de atencion 15</p>
+	<br />
+
+	<h3> <!-- Empieza las consultas por llamadas-->
+		<b>Consultas por llamadas</b>
+	</h3>
+
+	<label for = "idDuracionLlamadas">Duracion</label>
+	<input type="number" id="idDuracionLlamadas" placeholder="Duración">
+	<button type="button">Consultar operadores mas llamadas de esa duracion</button>
+	<br>
+	<ul>
+		<li> Ana Gonzales</li>
+	</ul>
+	<br>
+
+	<label for="idPalabrasConsultas">Palabras:</label>
+	<input type="text" id="idPalabrasConsultas" placeholder="Palabras">
+	<button type="button">Consultar Palabra</button>
+
+	<table>
+		<thead>
+			<tr>
+				<th>NUMERO</th>
+				<th>OPERADOR</th>
+				<th>DESCRIPCION</th>
+				<th>MOTIVO</th>
+				<th>DURACION</th>
+				<th>CELULAR</th>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Luis Perez</td>
+				<td>Hace Ruido</td>
+				<td><img src="img/Numero3.jpg" alt="imagen numero 3"></td>
+				<td>13</td>
+				<td>095654123</td>
+			</tr>
+		</thead>
+	</table>
+	<br>
+
+	<button type="button">Distribucion de llamadas</button>
+	<br>
+</div>
+</div>
+<a href=#tope>Ir al tope</a>
+
+<footer>
+	<p>Francisco Rossi:219401 y Guillermo Ramirez:207523</p>
+</footer>
+	
+
+
+
+
+</body>
+</html>

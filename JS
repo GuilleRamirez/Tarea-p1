@@ -1,0 +1,42 @@
+window.addEventListener("load",inicio);
+
+class contacto{
+
+	constructor(nombre,edad,mail){
+		this.nombre=nombre;
+		this.edad=edad;
+		this.mail=mail;
+	}
+	toString(){
+		return this.nombre +" "+ this.edad +" "+ this.mail;
+	}
+}
+
+
+class ListaOperadores {
+	constructor(){
+		this.lista=[];
+	}
+	agregar(Elemento){
+		this.lista.push(Elemento);
+	}
+	darTodos(){
+		return this.lista;
+	}
+}
+
+
+let ListaOperadores = new ListaOperadores();
+ 
+
+function inicio(){
+	document.getElementById("BotonRegistro").addEventListener("click",AgregarOperador);
+} 
+
+function AgregarRegistroOperador(){
+	let nombreOperador = document.getElementById("idNombreRegistro").checkValidity();
+	let edadOperador = document.getElementById("idEdadRegistro").checkValidity();
+	let mailOperador = document.getElementById("idMailRegistro").checkValidity();
+
+
+}
